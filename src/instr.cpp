@@ -6,7 +6,20 @@ int* create_registers() {
   return r;
 }
 
-void add(int* regs, int rd, int rs, int rt) {
+void add_op(int* regs, int rd, int rs, int rt) {
   // add register rs to rt and store the result in rd
   *(regs+rd) = *(regs+rs) + *(regs+rt);
+}
+
+void sub_op(int* regs, int rd, int rs, int rt) {
+  // sub register rs and rt and store the result in rd
+  *(regs+rd) = *(regs+rs) - *(regs+rt);
+}
+
+void and_op(int* regs, int rd, int rs, int rt) {
+  *(regs+rd) = *(regs+rs) & *(regs+rt);
+}
+
+void or_op(int* regs, int rd, int rs, int rt) {
+  *(regs+rd) = *(regs+rs) & *(regs+rt);
 }
