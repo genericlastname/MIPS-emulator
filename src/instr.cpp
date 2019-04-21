@@ -31,9 +31,9 @@ void or_op(int* regs, int rd, int rs, int rt) {
 }
 
 void lw_op(int* regs, int* mem, int rs, int rt, int offset) {
-  *(regs+rt) = *(mem+(*(regs+rs)+offset));
+  *(regs+rt) = *(mem+( *(regs+rs)+offset) );
 }
 
 void sw_op(int* regs, int* mem, int rs, int rt, int offset) {
-  *(mem+(*(regs+rs)+offset)) = *(regs+rt);
+  *(mem+( *(regs+rs)+offset) ) = *(regs+rt);
 }
