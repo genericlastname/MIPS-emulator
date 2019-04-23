@@ -42,6 +42,5 @@ int main(int argc, char **argv) {
       show(mem, true);
     }
     else cout << "File not found" << endl;
-
   }
 }
