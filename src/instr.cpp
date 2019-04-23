@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "instr.h"
 
 int* create_registers() {
@@ -36,4 +37,20 @@ void lw_op(int* regs, int* mem, int rs, int rt, int offset) {
 
 void sw_op(int* regs, int* mem, int rs, int rt, int offset) {
   *(mem+( *(regs+rs)+offset) ) = *(regs+rt);
+}
+
+void addi_op(int* regs, int rt, int rs, int imm) {
+  *(regs+rt) = *(regs+rs) + imm;
+}
+
+void show(const int* regs, const int r) {
+  if (r == -1) {
+    for (int i=0; i<32; i+=4) {
+      printf("%i:\t%04x\t %i:\t%04x\t %i:\t%04x\t %i:\t%04x\n",
+              i, regs[i], i+1, regs[i+1], i+2, regs[i+2], i+3, regs[i+3]);
+    }
+  } 
+  else if (r > -1) {
+    printf("%i: %i\n", r, regs[r]);
+  }
 }

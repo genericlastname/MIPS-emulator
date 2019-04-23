@@ -5,6 +5,7 @@
 #include <sstream>
 #include <bitset>
 #include <map>
+#include <vector>
 
 using namespace std;
 
@@ -12,6 +13,6 @@ string hextobin(const string&);
 
 int bintoint(const string&);
 
-string* getinstr(const string&);
+vector<string> getinstr(const string&);
 
 #endif

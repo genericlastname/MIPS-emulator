@@ -13,5 +13,9 @@ void or_op(int*, int, int, int);
 // i format rs, rt, offset
 void lw_op(int*, int*, int, int, int);
 void sw_op(int*, int*, int, int, int);
+void addi_op(int*, int, int, int);
+
+// misc interactive mode commands
+void show(const int* regs, const int r=-1);
 
 #endif
