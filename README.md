@@ -1,5 +1,5 @@
 # MIPS Project
-## Kyle Brown
+by Kyle Brown
 
 # Building
 
