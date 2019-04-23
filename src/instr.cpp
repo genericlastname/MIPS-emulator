@@ -68,11 +68,11 @@ void bne_op(int* regs, int rt, int rs, int offset) {
   }
 }
 
-void show(const int* regs) {
+void show(const int* regs, bool m) {
   for (int i=0; i<32; i+=4) {
     printf("%i:\t%04x\t %i:\t%04x\t %i:\t%04x\t %i:\t%04x\n",
             i, regs[i], i+1, regs[i+1], i+2, regs[i+2], i+3, regs[i+3]);
   }
 
-  printf("PC:\t%04x\n", regs[32]);
+  if (!m) printf("PC:\t%04x\n", regs[32]);
 }

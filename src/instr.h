@@ -18,6 +18,6 @@ void bne_op(int*, int, int, int);
 void addi_op(int*, int, int, int);
 
 // misc interactive mode commands
-void show(const int*);
+void show(const int* regs, bool m=false);
 
 #endif
