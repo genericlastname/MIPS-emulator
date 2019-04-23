@@ -9,9 +9,9 @@ Run `make` from the top level directory
 
 Navigate to the `bin/` directory and run either:
 ```
-mips
+./mips
 ```
 directly or run from a file by typing:
 ```
-mips filename.txt
+./mips filename.txt
 ```
