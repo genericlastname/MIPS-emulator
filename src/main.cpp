@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <stdio.h>
 #include "instr.h"
 #include "convert.h"
@@ -18,8 +19,10 @@ int main() {
   regs[7] = 13;
   regs[3] = 14;
 
-  string bin = hexbin("00e32822");
+  string bin = hextobin("00e32822");
   cout << bin << endl;
   string* instr = getinstr(bin);
   cout << instr[1] << endl;
+  int rs = bintoint("00111");
+  cout << rs << endl;
 }

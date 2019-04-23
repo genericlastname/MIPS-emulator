@@ -8,7 +8,9 @@
 
 using namespace std;
 
-string hexbin(const string&);
+string hextobin(const string&);
+
+int bintoint(const string&);
 
 string* getinstr(const string&);
 

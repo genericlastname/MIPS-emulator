@@ -2,7 +2,7 @@
 
 using namespace std;
 
-string hexbin(const string& hexinput) {
+string hextobin(const string& hexinput) {
   stringstream out;
   out << hex << hexinput;
   unsigned n;
@@ -11,6 +11,12 @@ string hexbin(const string& hexinput) {
 
   return (b.to_string());
 }
+
+int bintoint(const string& bininput) {
+  int value = stoi(bininput, 0, 2);
+  return value;
+}
+
 
 string* getinstr(const string& bininput) {
   string opcode = bininput.substr(0, 6);
