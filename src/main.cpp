@@ -78,10 +78,10 @@ int main() {
           sw_op(regs, mem, rs, rt, imm);
         }
         else if (instr[1] == "beq") {
-          /* beq_op(regs, rs, rt, imm); */
+          beq_op(regs, rs, rt, imm);
         }
         else if (instr[1] == "bne") {
-          /* bne(regs, rs, rt, imm); */
+          bne_op(regs, rs, rt, imm);
         }
         else if (instr[1] == "addi") {
           addi_op(regs, rt, rs, imm);

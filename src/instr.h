@@ -13,6 +13,8 @@ void or_op(int*, int, int, int);
 // i format rs, rt, offset
 void lw_op(int*, int*, int, int, int);
 void sw_op(int*, int*, int, int, int);
+void beq_op(int*, int, int, int);
+void bne_op(int*, int, int, int);
 void addi_op(int*, int, int, int);
 
 // misc interactive mode commands

@@ -50,6 +50,24 @@ void addi_op(int* regs, int rt, int rs, int imm) {
   *(regs+32) += 4; // PC register
 }
 
+void beq_op(int* regs, int rt, int rs, int offset) {
+  if ( *(regs+rt) == *(regs+rs) ) {
+    *(regs+32) += 4*offset; // mult by 4 to get number of byte to inc PC by
+  }
+  else {
+    *(regs+32) += 4;
+  }
+}
+
+void bne_op(int* regs, int rt, int rs, int offset) {
+  if ( *(regs+rt) != *(regs+rs) ) {
+    *(regs+32) += 4*offset; // mult by 4 to get number of byte to inc PC by
+  }
+  else {
+    *(regs+32) += 4;
+  }
+}
+
 void show(const int* regs) {
   for (int i=0; i<32; i+=4) {
     printf("%i:\t%04x\t %i:\t%04x\t %i:\t%04x\t %i:\t%04x\n",
