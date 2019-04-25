@@ -15,7 +15,7 @@ void lw_op(int*, int*, int, int, int);
 void sw_op(int*, int*, int, int, int);
 void beq_op(int*, int, int, int);
 void bne_op(int*, int, int, int);
-void addi_op(int*, int, int, int);
+void addi_op(int*, int, int, __int16_t);
 
 // misc interactive mode commands
 void show(const int* regs, bool m=false);

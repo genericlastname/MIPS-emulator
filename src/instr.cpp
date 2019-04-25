@@ -45,7 +45,7 @@ void sw_op(int* regs, int* mem, int rs, int rt, int offset) {
   *(regs+32) += 4; // PC register
 }
 
-void addi_op(int* regs, int rt, int rs, int imm) {
+void addi_op(int* regs, int rt, int rs, __int16_t imm) {
   *(regs+rt) = *(regs+rs) + imm;
   *(regs+32) += 4; // PC register
 }
@@ -70,9 +70,9 @@ void bne_op(int* regs, int rt, int rs, int offset) {
 
 void show(const int* regs, bool m) {
   for (int i=0; i<32; i+=4) {
-    printf("%i:\t%04x\t %i:\t%04x\t %i:\t%04x\t %i:\t%04x\n",
-            i, regs[i], i+1, regs[i+1], i+2, regs[i+2], i+3, regs[i+3]);
+    printf("%i:\t%04X\t %i:\t%04X\t %i:\t%04X\t %i:\t%04X\n",
+            i, regs[i] & 0xffff, i+1, regs[i+1] & 0xffff, i+2, regs[i+2] & 0xffff, i+3, regs[i+3] & 0xffff);
   }
 
-  if (!m) printf("PC:\t%04x\n", regs[32]);
+  if (!m) printf("PC:\t%04X\n", regs[32]);
 }
